@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
+
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+
+        <section id="game-area">
+
+            <div class="buttons">
+                <button onclick="choice('rock')">🪨</button>
+                <button onclick="choice('paper')">📃</button>
+                <button onclick="choice('scissors')">✂️</button>
+            </div>
+
+            <div class="score-board">
+                <div id="player"></div>
+                <div id="computer"></div>
+            </div>
+
+            <div class="result"></div>
+
+        </section>
     
 </body>
 </html>

@@ -18,23 +18,30 @@
         <h1>Rock Paper Scissors</h1>
     </header>
 
-    <!-- contains the whole interactice playing-area-->
+    <!-- Welcome & about-->
+    <section id="welcome"></section>
+
+    <!-- Goal & rules of game-->
+    <section id="rules"></section>
+
+    <!-- Contains the whole interactice game-area-->
         <section id="game-area">
 
-            <!-- clickable choices -->
+            <!-- Clickable choices -->
             <div class="choices">
-                <button onclick="choice('rock')">🪨</button>
-                <button onclick="choice('paper')">📃</button>
-                <button onclick="choice('scissors')">✂️</button>
+                <button id="rock">🪨</button>
+                <button id="paper">📃</button>
+                <button id="scissors">✂️</button>
             </div>
 
-            <!-- scores and stats -->
+            <!-- Scores and stats -->
             <div class="score-board">
-                <div id="player">Player:</div>
-                <div id="computer">Computer:</div>
+                <div id="player" class="badge"></div>
+                <div id="computer" class="badge"></div>
+                <span id="player-score">0</span>:<span id="computer-score">0</span>
             </div>
 
-            <!-- displays the winner and explanation for result -->
+            <!-- Displays the winner and explanation for result -->
             <div class="result">Paper covers Rock! You win!</div>
 
         </section>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+/* Add´s background and game-area style */
 body {
     background: url('../images/arena.jpg') no-repeat center center/cover;
     font-family: 'New Amsterdam', Arial;
@@ -8,6 +11,7 @@ body {
     align-items: center;
 }
 
+/* Styles the header */
 h1{
     font-size: 350%;
     color: rgb(197, 31, 31);
@@ -16,29 +20,47 @@ h1{
     border-radius: 400px;
 }
 
+/* Pushes interactive game-area down*/
 #game-area{
     position: absolute;
-    bottom: 50px;
+    bottom: 80px;
 }
 
+/* Defines button-style */
 .choices button {
-    font-size: 800%;
+    font-size: 600%;
     margin: 0 15px;
     border-radius: 300px;
     background-color: hsl(200, 205, 208);
     cursor: grab;
 }
 
+/* Add´s hover effect style for buttons */
 .choices button:hover{
     background-color: rgb(200, 205, 208);
 }
 
+/* Styling of score-board */
 .score-board {
+    text-align: center;
+    background-color: azure;
+    border: 1.5px solid black;
+    padding: 5 0px;
+    margin-top: 20px
+}
+
+/* Who won game and why */
+.result {
     text-align: center;
     background-color: azure;
 }
 
-.result {
-    text-align: center;
-    background-color: azure;
+/* hide / disable */
+
+.hide {
+    display: none;
+}
+
+.disable {
+    pointer-events: none;
 }

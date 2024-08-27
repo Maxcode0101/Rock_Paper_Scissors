@@ -20,6 +20,8 @@ h1{
     border-radius: 400px;
 }
 
+/** GAME-AREA-STYLES **/
+
 /* Pushes interactive game-area down*/
 #game-area{
     position: absolute;
@@ -40,19 +42,60 @@ h1{
     background-color: rgb(200, 205, 208);
 }
 
-/* Styling of score-board */
+/** SCOREBOARD-STYLES **/
+
+/* Styling of score-board-box */
 .score-board {
+    margin: 20px auto;
     text-align: center;
+    border: 3px solid azure;
+    border-radius: 4px;
+    width: 200px;
+    color: black;
     background-color: azure;
-    border: 1.5px solid black;
+    font-size: 30px;
     padding: 5 0px;
-    margin-top: 20px
+    position: sticky;
 }
 
 /* Who won game and why */
 .result {
+    margin: auto;
     text-align: center;
+    margin-top: 10px;
     background-color: azure;
+    border-radius: 4px;
+    width: 200px;
+}
+
+/* Scoreboard frame for Player / Computer*/
+.badge {
+    background-color: rgb(197, 31, 31);
+    padding: 2px 10px;
+    min-height: 25px;
+    min-width: 45px;
+    border-radius: 4px;
+}
+
+/* Scoreboard-player-box content */
+#player-label {
+    position: absolute;
+    color: azure;
+    font-size: 15px;
+    text-align: center;
+    top: 3.5px;
+    left: -10px;
+
+}
+
+/* Scoreboard-computer-box content */
+#computer-label {
+    position: absolute;
+    color: azure;
+    font-size: 15px;
+    text-align: center;
+    top: 3.5px;
+    right: -10px;
 }
 
 /* hide / disable */

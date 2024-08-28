@@ -26,8 +26,37 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
+function win() {
+    console.log("WIN");
+}
+
+function lose() {
+    console.log("LOSE");
+}
+
+function draw() {
+    console.log("DRAW");
+}
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
+    switch (userChoice + computerChoice) {
+        case "paperrock":
+        case "rockscissors":
+        case "scissorspaper":
+            win();
+            break;
+        case "rockpaper":
+        case "scissorsrock":
+        case "paperscissors":
+            lose();
+            break;
+        case "rockrock":
+        case "scissorsscissors":
+        case "paperpaper":
+            draw();
+            break;
+    }
 }
 
 function main() {

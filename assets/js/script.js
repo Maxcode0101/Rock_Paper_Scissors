@@ -6,8 +6,8 @@ const gameArea_section = document.getElementById("game-area");
 
 /** GAME-AREA **/
 /* Scores & Stats */
-const userScore = 0;
-const computerScore = 0;
+let userScore = 0;
+let computerScore = 0;
 const userScore_span = document.getElementById("player-score");
 const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
@@ -21,39 +21,48 @@ const reset_div = document.getElementById("reset");
 
 
 function getComputerChoice() {
-    const choices = ['rock', 'paper', 'scissors', 'reset'];
+    const choices = ['r', 'p', 's', 're'];
     const randomNumber = Math.floor(Math.random()*3);
     return choices[randomNumber];
 }
 
-function win() {
-    console.log("WIN");
+function convertToWord (letter) {
+    if (letter === "r") return "Rock";
+    if (letter === "p") return "Paper";
+    return "Scissors";
+}
+
+function win(userChoice, computerChoice) {
+    userScore++;
+    userScore_span.innerHTML = userScore;
+    computerScore_span.innerHTML = computerScore;
+    result_div.innerHTML = `${userChoice} beats ${computerChoice}. You win! 🔥`;
 }
 
 function lose() {
-    console.log("LOSE");
+
 }
 
 function draw() {
-    console.log("DRAW");
+
 }
 
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
-        case "paperrock":
-        case "rockscissors":
-        case "scissorspaper":
+        case "pr":
+        case "rs":
+        case "sp":
             win();
             break;
-        case "rockpaper":
-        case "scissorsrock":
-        case "paperscissors":
+        case "rp":
+        case "sr":
+        case "ps":
             lose();
             break;
-        case "rockrock":
-        case "scissorsscissors":
-        case "paperpaper":
+        case "rr":
+        case "ss":
+        case "pp":
             draw();
             break;
     }
@@ -61,19 +70,19 @@ function game(userChoice) {
 
 function main() {
     rock_div.addEventListener('click', function() {
-        game("rock");
+        game("r");
     })
     
     paper_div.addEventListener('click', function() {
-        game("paper");
+        game("p");
     })
     
     scissors_div.addEventListener('click', function() {
-        game("scissors");
+        game("s");
     })
     
     reset_div.addEventListener('click', function() {
-        game("reset");
+        game("re");
     })
 }
 

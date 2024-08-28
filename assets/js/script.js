@@ -20,6 +20,16 @@ const scissors_div = document.getElementById("scissors");
 const reset_div = document.getElementById("reset");
 
 
+function getComputerChoice() {
+    const choices = ['rock', 'paper', 'scissors', 'reset'];
+    const randomNumber = Math.floor(Math.random()*3);
+    return choices[randomNumber];
+}
+
+function game(userChoice) {
+    const computerChoice = getComputerChoice();
+}
+
 function main() {
     rock_div.addEventListener('click', function() {
         game("rock");
@@ -38,3 +48,4 @@ function main() {
     })
 }
 
+main();

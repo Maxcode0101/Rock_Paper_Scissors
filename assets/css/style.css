@@ -37,9 +37,11 @@ main {
 /** WELCOME-SECTION **/
 /* Game-Introduction-Text-Box */
 #welcome-text {
-    padding: 10px 20px 10px 20px;
-    font-family: Arial;
-    font-size: large;
+    text-align: center;
+    padding: 20px 50px 20px 50px;
+    font-family: "Play", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     border: 5px solid rgb(197, 31, 31);
     border-radius: 4px;
     background-color: azure;
@@ -52,24 +54,31 @@ main {
 
 /* Button to start game */
 #close-button {
+    padding: 10px;
     margin: 0;
     position: absolute;
     left: 50%;
-    bottom: 10px;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 300%;
     border-radius: 100px;
-    background-color: hsl(200, 205, 208);
+    background-color:  rgb(197, 31, 31);
+    color: azure;
     cursor: grab;
 }
 
 /* Heading for Welcome-Text */
 div > h2 {
     font-weight: bold;
-    margin: 10px 0px 10px 0px;
-    font-size: 120%;
+    text-decoration: underline;
+    margin: 40px 0px 20px 0px;
+    font-size: 150%;
     text-align: center;
+}
+
+/* Gameplay Pic */
+.rules {
+    margin: 20px 0px 20px 0px;
 }
 
 /* Spacing lines welcome-text p´s */

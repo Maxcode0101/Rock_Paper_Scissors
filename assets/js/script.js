@@ -1,26 +1,26 @@
 /** DOM-VARIABLES **/
 /* Sections */
-const welcome_section = document.getElementById("welcome");
-const rules_section = document.getElementById("rules");
-const gameArea_section = document.getElementById("game-area");
+const welcomeSection = document.getElementById("welcome");
+const rulesSection = document.getElementById("rules");
+const gameAreaSection = document.getElementById("game-area");
 
 /** GAME-AREA **/
 /* Scores & Stats */
 let userScore = 0;
 let computerScore = 0;
-const userScore_span = document.getElementById("player-score");
-const computerScore_span = document.getElementById("computer-score");
-const scoreBoard_div = document.querySelector(".score-board");
-const result_div = document.querySelector(".result");
+const userScoreSpan = document.getElementById("player-score");
+const computerScoreSpan = document.getElementById("computer-score");
+const scoreBoardDiv = document.querySelector(".score-board");
+const resultDiv = document.querySelector(".result");
 const playerSelection = document.getElementById("player-choice");
 const computerSelection = document.getElementById("computer-choice");
 
 /* Click & Play */
-const choices_div = document.getElementsByClassName(".choices");
-const rock_btn = document.getElementById("rock");
-const paper_btn = document.getElementById("paper");
-const scissors_btn = document.getElementById("scissors");
-const reset_btn = document.getElementById("reset");
+const choicesDiv = document.getElementsByClassName(".choices");
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+const resetBtn = document.getElementById("reset");
 
 
 function getComputerChoice() {
@@ -37,24 +37,24 @@ function convertToWord(letter) {
 
 function win(userChoice, computerChoice) {
     userScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result_div.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win! 🔥`;
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
+    resultDiv.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win! 🔥`;
 }
 
 
 
 function lose(userChoice, computerChoice) {
     computerScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result_div.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lost... 😞`;
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
+    resultDiv.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lost... 😞`;
 }
 
 function draw(userChoice, computerChoice) {
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result_div.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It´s a draw... `;
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
+    resultDiv.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It´s a draw... `;
 }
 
 function game(userChoice) {
@@ -81,9 +81,9 @@ function game(userChoice) {
 }
 
 function main() {
-    rock_btn.addEventListener('click', () => game("r"));
-    paper_btn.addEventListener('click', () => game("p"));
-    scissors_btn.addEventListener('click', () => game("s"));
+    rockBtn.addEventListener('click', () => game("r"));
+    paperBtn.addEventListener('click', () => game("p"));
+    scissorsBtn.addEventListener('click', () => game("s"));
 }
 
 main();

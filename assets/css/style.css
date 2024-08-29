@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
 
+/* Wildcard */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Add´s background and game-area style */
 body {
     background: url('../images/arena.jpg') no-repeat center center/cover;
@@ -25,6 +32,32 @@ main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+}
+
+/** WELCOME-SECTION **/
+#welcome-text {
+    padding: 10px 20px 10px 20px;
+    font-family: Arial;
+    border-radius: 4px;
+    background-color: antiquewhite;
+    color: black;
+    position: relative;
+    min-width: 1000px;
+    min-height: 1000px;
+    z-index: 10;
+}
+
+#close-button {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 300%;
+    border-radius: 100px;
+    background-color: hsl(200, 205, 208);
+    cursor: grab;
 }
 
 /** GAME-AREA-STYLES **/

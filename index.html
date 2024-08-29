@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +13,21 @@
 
     <title>Rock Paper Scissors</title>
 </head>
+
 <body>
-<!-- Displays the name of the game -->
+    <!-- Displays the name of the game -->
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
 
-    <!-- Welcome & about-->
-    <section id="welcome"></section>
+    <main>
+        <!-- Welcome & about-->
+        <section id="welcome"></section>
 
-    <!-- Goal & rules of game-->
-    <section id="rules"></section>
+        <!-- Goal & rules of game-->
+        <section id="rules"></section>
 
-    <!-- Contains the whole interactice game-area-->
+        <!-- Contains the whole interactice game-area-->
         <section id="game-area">
 
             <!-- Clickable choices -->
@@ -37,8 +40,8 @@
 
             <!-- Scores and stats -->
             <div class="score-board">
-                <div id="player-label" class="badge">player</div>
-                <div id="computer-label" class="badge">computer</div>
+                <div id="player-label" class="badge">player <br> <span id="player-choice"></span></div>
+                <div id="computer-label" class="badge">computer <br> <span id="computer-choice"></span></div>
                 <span id="player-score">0</span>:<span id="computer-score">0</span>
             </div>
 
@@ -46,8 +49,10 @@
             <div class="result">Paper covers Rock! You win!</div>
 
         </section>
+    </main>
     
-        <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

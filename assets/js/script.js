@@ -4,6 +4,10 @@ const welcomeSection = document.getElementById("welcome");
 const rulesSection = document.getElementById("rules");
 const gameAreaSection = document.getElementById("game-area");
 
+/** WELCOME-AREA **/
+const welcomeDiv = document.getElementById("welcome-text");
+const closeBtn = document.getElementById("close-button");
+
 /** GAME-AREA **/
 /* Scores & Stats */
 let userScore = 0;

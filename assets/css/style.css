@@ -47,19 +47,13 @@ main {
     background-color: azure;
     color: black;
     position: relative;
-    min-width: 1000px;
-    min-height: 1000px;
     z-index: 10;
 }
 
 /* Button to start game */
 #close-button {
     padding: 10px;
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin-top: 30px;
     font-size: 300%;
     border-radius: 100px;
     background-color:  rgb(197, 31, 31);
@@ -87,7 +81,7 @@ div > h2 {
     border: 5px solid rgb(50, 49, 49); 
     border-radius: 5px;   
     min-height: 10px;
-    max-width: 150px;
+    min-width: 150px;
 }
 
 /** GAME-AREA-STYLES **/
@@ -167,12 +161,22 @@ div > h2 {
     right: -10px;
 }
 
-/* hide / disable */
+/** HIDE / DISABLE **/
+/* Hides the welcome-section */
 
+.visibility-toggle{
+    visibility: hidden;
+}
+
+/* Not used yet */
 .hide {
     display: none;
 }
 
 .disable {
     pointer-events: none;
+}
+
+.visibility-toggle{
+    visibility: hidden;
 }

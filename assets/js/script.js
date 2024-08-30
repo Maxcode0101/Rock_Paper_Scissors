@@ -1,7 +1,6 @@
 /** DOM-VARIABLES **/
 /* Sections */
 const welcomeSection = document.getElementById("welcome");
-const rulesSection = document.getElementById("rules");
 const gameAreaSection = document.getElementById("game-area");
 
 /** WELCOME-AREA **/
@@ -26,6 +25,9 @@ const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
 const resetBtn = document.getElementById("reset");
 
+closeBtn.addEventListener('click', ()=>{
+    welcomeDiv.classList.toggle('visibility-toggle')
+  })
 
 function getComputerChoice() {
     const choices = ['r', 'p', 's',];

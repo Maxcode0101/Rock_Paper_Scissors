@@ -15,7 +15,7 @@
     <title>Rock Paper Scissors</title>
 </head>
 
-<body>
+<body class="disableScroll">
     <!-- Displays the name of the game -->
     <header>
         <h1>Rock Paper Scissors</h1>
@@ -24,9 +24,8 @@
     <main>
         <!-- Welcome & about-->
         <section id="welcome">
-            <div id="welcome-text">
                 <h2>About the game</h2>
-                <p>
+                <p class="edu">
                     Rock paper scissors is an
                     intransitive hand game, usually played between two people, in which each player simultaneously forms
                     one of three shapes with an outstretched hand. These shapes are "rock" (a closed fist), "paper" (a
@@ -36,7 +35,7 @@
                     the world in the early 20th century.
                 </p>
                 <hr class="ul">
-                <p>
+                <p class="edu">
                     A simultaneous, zero-sum game, it has three possible outcomes: a draw, a win, or a loss. A player
                     who decides to play rock will beat another player who chooses scissors ("rock crushes scissors" or
                     "breaks scissors" or sometimes "blunts scissors"), but will lose to one who has played paper
@@ -44,7 +43,7 @@
                     both players choose the same shape, the game is tied and is usually replayed to break the tie.
                 </p>
                 <hr class="ul">
-                <p>
+                <p class="edu">
                     Rock paper scissors is often used as a fair choosing method between two people, similar to coin
                     flipping, drawing straws, or throwing dice in order to settle a dispute or make an unbiased group
                     decision. Unlike truly random selection methods, however, rock paper scissors can be played with
@@ -54,7 +53,7 @@
                 <!-- Goal & rules of game-->
                 <h2>Rules of the game</h2>
                 <img src="assets/images/Rock-paper-scissors.svg.webp" alt="Rock-paper-scissors" class="rules">
-                <p>
+                <p class="edu">
                     The players may start by counting to three aloud, or by speaking the name of the game (e.g. "Rock!
                     Paper! Scissors!"), raising one hand in a fist and swinging it down with each syllable onto their
                     other hand (or in a less common variant, holding it behind their back). They then "throw" or "shoot"
@@ -62,7 +61,7 @@
                     often saying the word "shoot" while doing so. 
                 </p>
                 <hr class="ul">
-                <p>
+                <p class="edu">
                     Variations include a version where players throw
                     immediately on the third count (thus throwing on the count of "Scissors!"), a version including five
                     counts rather than four ("Rock! Paper! Scissors! Says! Shoot!", almost exclusively localized in the
@@ -73,12 +72,10 @@
                 <!-- Closes welcome-section and starts game -->
                 <button id="close-button">Play!</button>
 
-            </div>
         </section>
 
         <!-- Contains the whole interactice game-area-->
         <section id="game-area">
-
             <!-- Clickable choices -->
             <div class="choices">
                 <button id="rock">🪨</button>
@@ -92,6 +89,11 @@
                 <div id="player-label" class="badge">player <br> <span id="player-choice"></span></div>
                 <div id="computer-label" class="badge">computer <br> <span id="computer-choice"></span></div>
                 <span id="player-score">0</span>:<span id="computer-score">0</span>
+            </div>
+
+            <!-- Timer -->
+            <div id="timer">
+                00:00
             </div>
 
             <!-- Displays the winner and explanation for result -->

@@ -36,7 +36,7 @@ main {
 
 /** WELCOME-SECTION **/
 /* Game-Introduction-Text-Box */
-#welcome-text {
+#welcome {
     text-align: center;
     padding: 20px 50px 20px 50px;
     font-family: "Play", sans-serif;
@@ -62,7 +62,7 @@ main {
 }
 
 /* Heading for Welcome-Text */
-div > h2 {
+section > h2 {
     font-weight: bold;
     text-decoration: underline;
     margin: 40px 0px 20px 0px;
@@ -121,6 +121,11 @@ div > h2 {
     position: sticky;
 }
 
+#timer {
+    text-align: center;
+    background-color: azure;
+}
+
 /* Who won game and why */
 .result {
     margin: auto;
@@ -163,9 +168,8 @@ div > h2 {
 
 /** HIDE / DISABLE **/
 /* Hides the welcome-section */
-
 .visibility-toggle{
-    visibility: hidden;
+    display: none;
 }
 
 /* Not used yet */
@@ -177,6 +181,40 @@ div > h2 {
     pointer-events: none;
 }
 
-.visibility-toggle{
-    visibility: hidden;
+
+/** RESPONSIVNESS **/
+/* Media query: MOBILE */
+@media only screen and (max-width: 600px) {
+
+    /* Make Arena-Background take up the whole screen */ 
+    body {
+        width: 100%;
+        min-height: 675px;
+    }
+
+    /* Center H1 */
+    h1 {
+        text-align: center;
+    }
+
+    #welcome {
+        max-width: 300px;
+        overflow: hidden;
+    }
+    
+    /* Style text in P-Elements */ 
+    .edu {
+        text-align: center;
+    }
+
+    .rules {
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Defines button-style */
+    .choices button {
+        font-size: 350%;
+    }
 }

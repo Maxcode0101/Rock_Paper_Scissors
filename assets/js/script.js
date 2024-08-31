@@ -26,7 +26,7 @@ const scissorsBtn = document.getElementById("scissors");
 const resetBtn = document.getElementById("reset");
 
 closeBtn.addEventListener('click', ()=>{
-    welcomeDiv.classList.toggle('visibility-toggle')
+    welcomeSection.classList.toggle('visibility-toggle')
   })
 
 function getComputerChoice() {

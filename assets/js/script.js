@@ -29,6 +29,10 @@ closeBtn.addEventListener('click', ()=>{
     welcomeSection.classList.toggle('visibility-toggle')
   })
 
+resetBtn.addEventListener('click', ()=>{
+    window.location.reload("Refresh")
+})
+
 function getComputerChoice() {
     const choices = ['r', 'p', 's',];
     const randomNumber = Math.floor(Math.random()*3);

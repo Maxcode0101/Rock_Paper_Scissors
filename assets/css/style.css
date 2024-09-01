@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     font-weight: bold;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Styles the header */
@@ -229,4 +229,3 @@ section > h2 {
         bottom: -5px;
     }
 }
-

@@ -7,7 +7,7 @@
     padding: 0;
 }
 
-/* Add´s background and game-area style */
+/* Add´s background and basic styles */
 body {
     background: url('../images/arena.jpg') no-repeat center center/cover;
     font-family: 'New Amsterdam', Arial;
@@ -16,14 +16,17 @@ body {
     flex-direction: column;
     font-weight: bold;
     align-items: center;
+    height: 100vh;
 }
 
 /* Styles the header */
-h1{
+h1{ 
+    margin: 8.5px;
     font-size: 350%;
     color: rgb(197, 31, 31);
     background-color: azure;
     padding: 12px;
+    border: 5px solid rgb(197, 31, 31);
     border-radius: 400px;
 }
 
@@ -37,6 +40,7 @@ main {
 /** WELCOME-SECTION **/
 /* Game-Introduction-Text-Box */
 #welcome {
+    max-width: 800px;
     text-align: center;
     padding: 20px 50px 20px 50px;
     font-family: "Play", sans-serif;
@@ -46,7 +50,6 @@ main {
     border-radius: 4px;
     background-color: azure;
     color: black;
-    position: relative;
     z-index: 10;
 }
 
@@ -77,7 +80,7 @@ section > h2 {
 
 /* Spacing lines welcome-text p´s */
 .ul {
-    margin: 30px 400px 30px 400px;
+    margin: 30px 0px 30px 0px;
     border: 5px solid rgb(50, 49, 49); 
     border-radius: 5px;   
     min-height: 10px;
@@ -187,10 +190,6 @@ section > h2 {
 @media only screen and (max-width: 600px) {
 
     /* Make Arena-Background take up the whole screen */ 
-    body {
-        width: 100%;
-        min-height: 675px;
-    }
 
     /* Center H1 */
     h1 {
@@ -216,5 +215,18 @@ section > h2 {
     /* Defines button-style */
     .choices button {
         font-size: 350%;
+        margin: 0px;
+        border-radius: 175px;
     }
 }
+
+/* Media query: LARGE MOBILE's ROTATE AND LANDSCAPE PHONE'S */
+@media only screen and (min-width: 601px) {
+     
+    /* Pushes button's down */
+    #game-area{
+        position: absolute;
+        bottom: -5px;
+    }
+}
+

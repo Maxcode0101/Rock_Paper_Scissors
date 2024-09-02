@@ -34,6 +34,8 @@ let timer = document.querySelector('#timer');
 let countDownInterval;
 let timeLeft = 4;
 
+
+// Close welcome-section and start game
 closeBtn.addEventListener('click', () => {
     welcomeSection.classList.toggle('visibility-toggle')
     gameAreaSection.classList.toggle('visibility-toggle')
@@ -45,22 +47,26 @@ closeBtn.addEventListener('click', () => {
     }, 2000);
 })
 
+// Close game-area and return to welcome-section, like refresh page
 resetBtn.addEventListener('click', () => {
     window.location.reload("Refresh")
 })
 
+// array
 function getComputerChoice() {
     const choices = ['r', 'p', 's', ];
     const randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
 
+// Takes choice out of array and converts it to word
 function convertToWord(letter) {
     if (letter === "r") return "Rock";
     if (letter === "p") return "Paper";
     return "Scissors";
 }
 
+// Player wins - increment player-score - display result
 function win(userChoice, computerChoice) {
     userScore++;
     userScoreSpan.innerHTML = userScore;
@@ -68,6 +74,7 @@ function win(userChoice, computerChoice) {
     resultDiv.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win! 🔥`;
 }
 
+// Player lost - increment comp-score - display result
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
@@ -75,19 +82,21 @@ function lose(userChoice, computerChoice) {
     resultDiv.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lost... 😞`;
 }
 
+// Player lost because of timer count down - increment comp-score - display result
 function expired() {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
     resultDiv.innerHTML = `You ran out of time. You lost... ⌛`;
 }
-
+ // Draw - display result
 function draw(userChoice, computerChoice) {
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
     resultDiv.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It's a draw... `;
 }
 
+// Switch-function - Log user-choice and compare to comp-choice
 function game(userChoice) {
     clearInterval(countDownInterval);
     hands.forEach(hand => {
@@ -117,7 +126,7 @@ function game(userChoice) {
     }
 }
 
-
+// Main function - Btn-click = Rock/Paper/Scissor
 main();
 
 function main() {
@@ -126,7 +135,7 @@ function main() {
     scissorsBtn.addEventListener('click', () => game("s"));
 }
 
-
+// Timeout countdown function
 function countDown() {
     timeLeft--;
     timer.innerText = `Seconds: ${timeLeft}`;
@@ -140,7 +149,7 @@ function countDown() {
     }
 }
 
-
+// Restart game, like next round - restart timer
 nextBtn.addEventListener("click", nextRound);
 
 function nextRound() {

@@ -129,6 +129,7 @@ section > h2 {
     align-items: center;
 }
 
+/* Timer-Box styles */
 #timer {
     margin: 0 auto;
     padding: 0.5em;
@@ -190,7 +191,6 @@ section > h2 {
 /* Media query: MOBILE */
 @media only screen and (max-width: 600px) {
 
-    /* Make Arena-Background take up the whole screen */ 
 
     /* Center H1 */
     h1 {

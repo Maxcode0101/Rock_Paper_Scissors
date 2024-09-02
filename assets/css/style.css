@@ -136,6 +136,8 @@ section > h2 {
     font-size: 2em;
     text-align: center;
     background-color: azure;
+    border: 3px solid azure;
+    border-radius: 4px;
 }
 
 /* Who won game and why */
@@ -234,12 +236,12 @@ section > h2 {
 
 /** 404-PAGE **/
 #error {
+    display: flex;
+    text-align: center;
     align-items: center;
-    margin: 8.5px;
-    font-size: 200%;
+    margin: 15px;
     color: rgb(197, 31, 31);
     background-color: azure;
-    padding: 12px;
+    padding: 20px;
     border: 5px solid rgb(197, 31, 31);
-    border-radius: 400px;
 }

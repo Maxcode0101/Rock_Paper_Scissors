@@ -82,7 +82,7 @@ function lose(userChoice, computerChoice) {
     resultDiv.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lost... 😞`;
 }
 
-// Player lost because of timer count down - increment comp-score - display result
+// Player lost because time ran out - stop game - increment comp-score - display result
 function expired() {
     computerScore++;
     userScoreSpan.innerHTML = userScore;
@@ -151,7 +151,7 @@ function countDown() {
 
 // Restart game, like next round - restart timer
 nextBtn.addEventListener("click", nextRound);
-
+// Loading delay - countdown again
 function nextRound() {
     playerSelection.innerText = "";
     computerSelection.innerText = "";

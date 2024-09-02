@@ -75,29 +75,33 @@
         </section>
 
         <!-- Contains the whole interactice game-area-->
-        <section id="game-area">
+        <section id="game-area" class="visibility-toggle">
             <!-- Clickable choices -->
             <div class="choices">
-                <button id="rock">🪨</button>
-                <button id="paper">📃</button>
-                <button id="scissors">✂️</button>
-                <button id="reset" value="Refresh">🔙</button>
+                <button id="rock" class="hand disable">🪨</button>
+                <button id="paper" class="hand disable">📃</button>
+                <button id="scissors" class="hand disable">✂️</button>
             </div>
 
             <!-- Scores and stats -->
             <div class="score-board">
                 <div id="player-label" class="badge">player <br> <span id="player-choice"></span></div>
+                <div id="scores">
+                    <span id="player-score">0</span>:<span id="computer-score">0</span>
+                </div>
                 <div id="computer-label" class="badge">computer <br> <span id="computer-choice"></span></div>
-                <span id="player-score">0</span>:<span id="computer-score">0</span>
             </div>
 
             <!-- Timer -->
-            <div id="timer">
-                00:00
-            </div>
+            <div id="timer">Loading</div>
 
             <!-- Displays the winner and explanation for result -->
-            <div class="result">Paper covers Rock! You win!</div>
+            <div class="result">In Progress</div>
+
+            <div class="choices">
+                <button id="reset" value="Refresh">🔙</button>
+                <button id="next" class="visibility-toggle">🔄️</button>
+            </div>
 
         </section>
     </main>

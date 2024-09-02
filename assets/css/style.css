@@ -10,6 +10,7 @@
 /* Add´s background and basic styles */
 body {
     background: url('../images/arena.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     font-family: 'New Amsterdam', Arial;
     margin: 0;
     display: flex;
@@ -35,6 +36,8 @@ main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    justify-content: center;
+    min-height: 80vh;
 }
 
 /** WELCOME-SECTION **/
@@ -87,20 +90,19 @@ section > h2 {
     min-width: 150px;
 }
 
-/** GAME-AREA-STYLES **/
-/* Pushes interactive game-area down*/
-#game-area{
-    position: absolute;
-    bottom: 80px;
+/* Defines button-style */
+.choices {
+    text-align: center;
+    margin: 1em auto;
 }
 
-/* Defines button-style */
 .choices button {
     font-size: 600%;
     margin: 0 15px;
     border-radius: 300px;
-    background-color: hsl(200, 205, 208);
+    background-color: azure;
     cursor: grab;
+    padding: 0.1em;
 }
 
 /* Add´s hover effect style for buttons */
@@ -116,15 +118,22 @@ section > h2 {
     text-align: center;
     border: 3px solid azure;
     border-radius: 4px;
-    width: 200px;
+    width: fit-content;
     color: black;
     background-color: azure;
-    font-size: 30px;
-    padding: 5 0px;
-    position: sticky;
+    font-size: 3em;
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #timer {
+    margin: 0 auto;
+    padding: 0.5em;
+    width: fit-content;
+    font-size: 2em;
     text-align: center;
     background-color: azure;
 }
@@ -136,7 +145,9 @@ section > h2 {
     margin-top: 10px;
     background-color: azure;
     border-radius: 4px;
-    width: 200px;
+    width: fit-content;
+    font-size: 2em;
+    padding: 0.5em;
 }
 
 /* Scoreboard frame for Player / Computer*/
@@ -149,39 +160,27 @@ section > h2 {
 }
 
 /* Scoreboard-player-box content */
-#player-label {
-    position: absolute;
+#player-label,
+#computer-label {
     color: azure;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
-    top: 3.5px;
-    left: -10px;
+    min-width: 100px;
+    margin: 0 0.5em;
+}
 
+#player-label {
+    left: -10px;
 }
 
 /* Scoreboard-computer-box content */
 #computer-label {
-    position: absolute;
-    color: azure;
-    font-size: 15px;
-    text-align: center;
-    top: 3.5px;
     right: -10px;
 }
 
-/** HIDE / DISABLE **/
-/* Hides the welcome-section */
-.visibility-toggle{
-    display: none;
-}
-
-/* Not used yet */
-.hide {
-    display: none;
-}
-
-.disable {
-    pointer-events: none;
+#player-score,
+#computer-score {
+    margin: 0 10px;
 }
 
 
@@ -221,11 +220,26 @@ section > h2 {
 }
 
 /* Media query: LARGE MOBILE's ROTATE AND LANDSCAPE PHONE'S */
-@media only screen and (min-width: 601px) {
-     
-    /* Pushes button's down */
-    #game-area{
-        position: absolute;
-        bottom: -5px;
-    }
+@media only screen and (min-width: 601px) {}
+
+/** HIDE / DISABLE **/
+/* Hides the welcome-section */
+.visibility-toggle {
+    display: none;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+/** 404-PAGE **/
+#error {
+    align-items: center;
+    margin: 8.5px;
+    font-size: 200%;
+    color: rgb(197, 31, 31);
+    background-color: azure;
+    padding: 12px;
+    border: 5px solid rgb(197, 31, 31);
+    border-radius: 400px;
 }

@@ -236,11 +236,15 @@ section > h2 {
 
 /** 404-PAGE **/
 #error {
+    max-width: 800px;
+    font-family: "Play", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     display: flex;
     text-align: center;
     align-items: center;
     margin: 15px;
-    color: rgb(197, 31, 31);
+    color: black;
     background-color: azure;
     padding: 20px;
     border: 5px solid rgb(197, 31, 31);

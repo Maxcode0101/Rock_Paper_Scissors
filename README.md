@@ -55,14 +55,14 @@ I used [coolors.co] https://coolors.co/c51f1f-f0ffff-c8cdd0-000000 to generate m
 
 - **404-Page**
 
-    - In case that some technical issue occurs and the user can't connect with the requested page, a funny message got displayed. Furthermore, the user receives some advice how to navigate back to the welcome page.
+    - In case that some technical issue occurs and the user can't connect with the requested page, a funny message is getting displayed. Furthermore, the user receives some advice how to navigate back to the welcome page.
 
 ![screenshot](documentation/features/feature03.png)
 
 
 ### Future Features
 
-One reason for doing this project is the possibility of extension.
+One reason for doing this project, is the possibility of extension.
 
 - Rock, Paper, Scissors, Lizard, Spock
     - It's thinkable to convert into the iconic variante Rock, Paper, Scissors, Lizard, Spock.
@@ -81,7 +81,6 @@ One reason for doing this project is the possibility of extension.
 - [![Markdown Builder](https://img.shields.io/badge/Markdown_Builder-grey?logo=markdown&logoColor=000000)](https://tim.2bn.dev/markdown-builder) used to generate README and TESTING templates.
 - [![Git](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [![GitHub](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) used for secure online code storage.
-- ⚠️⚠️ IDE: CHOOSE ONLY ONE <-- delete me ⚠️⚠️
 - [![Gitpod](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) used as a cloud-based IDE for development.
 - [![HTML](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) used for the main site content.
 - [![CSS](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) used for the main site design and layout.

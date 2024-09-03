@@ -6,7 +6,6 @@ const welcomeSection = document.getElementById("welcome");
 const gameAreaSection = document.getElementById("game-area");
 
 /** WELCOME-AREA **/
-const welcomeDiv = document.getElementById("welcome-text");
 const closeBtn = document.getElementById("close-button");
 
 /** GAME-AREA **/
@@ -15,14 +14,12 @@ let userScore = 0;
 let computerScore = 0;
 const userScoreSpan = document.getElementById("player-score");
 const computerScoreSpan = document.getElementById("computer-score");
-const scoreBoardDiv = document.querySelector(".score-board");
 const resultDiv = document.querySelector(".result");
 const playerSelection = document.getElementById("player-choice");
 const computerSelection = document.getElementById("computer-choice");
 const hands = document.querySelectorAll(".hand");
 
 /* Click & Play */
-const choicesDiv = document.getElementsByClassName(".choices");
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
@@ -37,20 +34,20 @@ let timeLeft = 4;
 
 // Close welcome-section and start game
 closeBtn.addEventListener('click', () => {
-    welcomeSection.classList.toggle('visibility-toggle')
-    gameAreaSection.classList.toggle('visibility-toggle')
+    welcomeSection.classList.toggle('visibility-toggle');
+    gameAreaSection.classList.toggle('visibility-toggle');
     setTimeout(() => {
         countDownInterval = setInterval(countDown, 1000);
         hands.forEach(hand => {
             hand.classList.toggle("disable");
         });
     }, 2000);
-})
+});
 
 // Close game-area and return to welcome-section, like refresh page
 resetBtn.addEventListener('click', () => {
-    window.location.reload("Refresh")
-})
+    window.location.reload("Refresh");
+});
 
 // array
 function getComputerChoice() {
